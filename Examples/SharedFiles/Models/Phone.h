@@ -10,4 +10,7 @@
 
 @interface Phone : NSObject
 
+@property (copy, nonatomic) NSString *type;
+@property (copy, nonatomic) NSString *number;
+
 @end

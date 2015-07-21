@@ -15,6 +15,9 @@
 		4D5C61F31B5E637F0077F88A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C61F11B5E637F0077F88A /* LaunchScreen.xib */; };
 		4D5C61FF1B5E637F0077F88A /* BasicExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C61FE1B5E637F0077F88A /* BasicExampleTests.m */; };
 		4D5C620B1B5E63C80077F88A /* TBRJSONMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C620A1B5E63C80077F88A /* TBRJSONMapper.m */; };
+		4D5C62141B5E6BCB0077F88A /* address.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C62101B5E6BCB0077F88A /* address.json */; };
+		4D5C621A1B5E6E3B0077F88A /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C62191B5E6E3B0077F88A /* Address.m */; };
+		4D5C621D1B5E6E580077F88A /* Phone.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C621C1B5E6E580077F88A /* Phone.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,11 @@
 		4D5C61FE1B5E637F0077F88A /* BasicExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicExampleTests.m; sourceTree = "<group>"; };
 		4D5C62091B5E63C80077F88A /* TBRJSONMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBRJSONMapper.h; path = ../../TBRJSONMapper/TBRJSONMapper.h; sourceTree = "<group>"; };
 		4D5C620A1B5E63C80077F88A /* TBRJSONMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBRJSONMapper.m; path = ../../TBRJSONMapper/TBRJSONMapper.m; sourceTree = "<group>"; };
+		4D5C62101B5E6BCB0077F88A /* address.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = address.json; sourceTree = "<group>"; };
+		4D5C62181B5E6E3B0077F88A /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Address.h; path = ../../SharedFiles/Models/Address.h; sourceTree = "<group>"; };
+		4D5C62191B5E6E3B0077F88A /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Address.m; path = ../../SharedFiles/Models/Address.m; sourceTree = "<group>"; };
+		4D5C621B1B5E6E580077F88A /* Phone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Phone.h; path = ../../SharedFiles/Models/Phone.h; sourceTree = "<group>"; };
+		4D5C621C1B5E6E580077F88A /* Phone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Phone.m; path = ../../SharedFiles/Models/Phone.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +76,7 @@
 			children = (
 				4D5C62081B5E638F0077F88A /* TBRJSONMapper */,
 				4D5C61E11B5E637F0077F88A /* Classes */,
+				4D5C620E1B5E6BAE0077F88A /* Resources */,
 				4D5C61E21B5E637F0077F88A /* Supporting Files */,
 				4D5C61FB1B5E637F0077F88A /* BasicExampleTests */,
 				4D5C61E01B5E637F0077F88A /* Products */,
@@ -139,6 +148,10 @@
 		4D5C620C1B5E63D90077F88A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4D5C62181B5E6E3B0077F88A /* Address.h */,
+				4D5C62191B5E6E3B0077F88A /* Address.m */,
+				4D5C621B1B5E6E580077F88A /* Phone.h */,
+				4D5C621C1B5E6E580077F88A /* Phone.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -148,6 +161,23 @@
 			children = (
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		4D5C620E1B5E6BAE0077F88A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C620F1B5E6BCB0077F88A /* JSON */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		4D5C620F1B5E6BCB0077F88A /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C62101B5E6BCB0077F88A /* address.json */,
+			);
+			name = JSON;
+			path = ../SharedFiles/JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +262,7 @@
 			files = (
 				4D5C61EE1B5E637F0077F88A /* Main.storyboard in Resources */,
 				4D5C61F31B5E637F0077F88A /* LaunchScreen.xib in Resources */,
+				4D5C62141B5E6BCB0077F88A /* address.json in Resources */,
 				4D5C61F01B5E637F0077F88A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,9 +281,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D5C621D1B5E6E580077F88A /* Phone.m in Sources */,
 				4D5C61EB1B5E637F0077F88A /* ViewController.m in Sources */,
 				4D5C61E81B5E637F0077F88A /* AppDelegate.m in Sources */,
 				4D5C620B1B5E63C80077F88A /* TBRJSONMapper.m in Sources */,
+				4D5C621A1B5E6E3B0077F88A /* Address.m in Sources */,
 				4D5C61E51B5E637F0077F88A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
