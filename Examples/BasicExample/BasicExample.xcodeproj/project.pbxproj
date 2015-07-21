@@ -14,6 +14,7 @@
 		4D5C61F01B5E637F0077F88A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C61EF1B5E637F0077F88A /* Images.xcassets */; };
 		4D5C61F31B5E637F0077F88A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C61F11B5E637F0077F88A /* LaunchScreen.xib */; };
 		4D5C61FF1B5E637F0077F88A /* BasicExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C61FE1B5E637F0077F88A /* BasicExampleTests.m */; };
+		4D5C620B1B5E63C80077F88A /* TBRJSONMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C620A1B5E63C80077F88A /* TBRJSONMapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		4D5C61F81B5E637F0077F88A /* BasicExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasicExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D5C61FD1B5E637F0077F88A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D5C61FE1B5E637F0077F88A /* BasicExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicExampleTests.m; sourceTree = "<group>"; };
+		4D5C62091B5E63C80077F88A /* TBRJSONMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBRJSONMapper.h; path = ../../TBRJSONMapper/TBRJSONMapper.h; sourceTree = "<group>"; };
+		4D5C620A1B5E63C80077F88A /* TBRJSONMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBRJSONMapper.m; path = ../../TBRJSONMapper/TBRJSONMapper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +66,9 @@
 		4D5C61D61B5E637F0077F88A = {
 			isa = PBXGroup;
 			children = (
-				4D5C61E11B5E637F0077F88A /* BasicExample */,
+				4D5C62081B5E638F0077F88A /* TBRJSONMapper */,
+				4D5C61E11B5E637F0077F88A /* Classes */,
+				4D5C61E21B5E637F0077F88A /* Supporting Files */,
 				4D5C61FB1B5E637F0077F88A /* BasicExampleTests */,
 				4D5C61E01B5E637F0077F88A /* Products */,
 			);
@@ -78,28 +83,31 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4D5C61E11B5E637F0077F88A /* BasicExample */ = {
+		4D5C61E11B5E637F0077F88A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4D5C620D1B5E63E50077F88A /* Controllers */,
+				4D5C620C1B5E63D90077F88A /* Models */,
 				4D5C61E61B5E637F0077F88A /* AppDelegate.h */,
 				4D5C61E71B5E637F0077F88A /* AppDelegate.m */,
 				4D5C61E91B5E637F0077F88A /* ViewController.h */,
 				4D5C61EA1B5E637F0077F88A /* ViewController.m */,
-				4D5C61EC1B5E637F0077F88A /* Main.storyboard */,
-				4D5C61EF1B5E637F0077F88A /* Images.xcassets */,
-				4D5C61F11B5E637F0077F88A /* LaunchScreen.xib */,
-				4D5C61E21B5E637F0077F88A /* Supporting Files */,
 			);
+			name = Classes;
 			path = BasicExample;
 			sourceTree = "<group>";
 		};
 		4D5C61E21B5E637F0077F88A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4D5C61EC1B5E637F0077F88A /* Main.storyboard */,
+				4D5C61EF1B5E637F0077F88A /* Images.xcassets */,
+				4D5C61F11B5E637F0077F88A /* LaunchScreen.xib */,
 				4D5C61E31B5E637F0077F88A /* Info.plist */,
 				4D5C61E41B5E637F0077F88A /* main.m */,
 			);
 			name = "Supporting Files";
+			path = BasicExample;
 			sourceTree = "<group>";
 		};
 		4D5C61FB1B5E637F0077F88A /* BasicExampleTests */ = {
@@ -117,6 +125,29 @@
 				4D5C61FD1B5E637F0077F88A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4D5C62081B5E638F0077F88A /* TBRJSONMapper */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C62091B5E63C80077F88A /* TBRJSONMapper.h */,
+				4D5C620A1B5E63C80077F88A /* TBRJSONMapper.m */,
+			);
+			name = TBRJSONMapper;
+			sourceTree = "<group>";
+		};
+		4D5C620C1B5E63D90077F88A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		4D5C620D1B5E63E50077F88A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +252,7 @@
 			files = (
 				4D5C61EB1B5E637F0077F88A /* ViewController.m in Sources */,
 				4D5C61E81B5E637F0077F88A /* AppDelegate.m in Sources */,
+				4D5C620B1B5E63C80077F88A /* TBRJSONMapper.m in Sources */,
 				4D5C61E51B5E637F0077F88A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
