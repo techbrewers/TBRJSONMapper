@@ -1,0 +1,67 @@
+{
+	"Recipe" : {
+		"title" : "Kalops",
+		"subtitle" : "Swedish stew",
+		"abstract" : "Swedish meatballs are perhaps the most famous culinary delight that has emerged from the largest of the Nordic countries.",
+		"time" : 60,
+		"category" : "Main",
+		"copyright" : "Copyright © Henrik Rindlöw (CC)",
+		"tip" :  "Why not eat your meatballs with a glass of Swedish aqvavit (snaps)?",
+		"stepImagesAvailable" : false,
+		"Steps" : [
+							 {
+							 "text" : "Finely dice the onion and sauté gently in a little butter without browning.",
+							 "Ingredients" : [
+																{"name" : "onion",
+																"quantity" : 1
+																},
+																{"name" : "oil"
+																}
+																]
+							 },
+							 {
+							 "text" : "Soak the breadcrumbs in milk.",
+							 "Ingredients" : [
+																{"name" : "ground (minced) beef/pork mixture",
+																"quantity" : 500,
+																"quantityUnit" : "g"
+																},
+																{"name" : "milk",
+																"quantity" : 250,
+																"quantityUnit" : "ml"
+																},
+																{"name" : "white breadcrumbs",
+																"quantity" : 75,
+																"quantityUnit" : "g"
+																}
+																]
+							 },
+							 {
+							 "text" : "Blend the ground meat, preferably in a food processor, with the onion, egg, milk/breadcrumb mixture and the spices to the proper consistency and taste. Add a little water if the mixture feels too firm. Check the taste by test-frying one meatball.",
+							 "Ingredients" : [
+																{"name" : "ground (minced) beef/pork mixture",
+																"quantity" : 500,
+																"quantityUnit" : "g"
+																},
+																{"name" : "egg",
+																"quantity" : 1
+																},
+																{"name" : "salt and pepper"
+																},
+																{"name" : "ground all-spice"
+																}
+																]
+							 },
+							 
+							 {
+							 "text" : "Shape small meatballs with the aid of two spoons and place on water-rinsed plates.",
+							 },
+							 {
+							 "text" : "Brown a generous pat of butter in a frying pan, and when it ‘goes quiet’ place the meatballs in the pan and let them brown on all sides. shake the frying pan often.",
+							 },
+							 {
+							 "text" : "Let them rest for two minutes, then serve with potato purée or boiled potatoes and raw stirred lingonberries.",
+							 }
+							 ]
+	}
+}

@@ -1,0 +1,138 @@
+{
+    "Recipe": {
+        "title": "Fläskfilé med senapssås",
+        "subtitle": "Pork fillet in mustard sauce",
+        "abstract": "A traditional Swedish recipe of pork fillet in a mustard cream sauce served with mixed roasted vegetables and salad.",
+        "time": 45,
+        "category": "Main",
+        "tip": "Alternatively, why not try this dish with a side of rice instead.",
+        "stepImagesAvailable": true,
+        "Steps": [
+            {
+                "text": "Peel and cut the potatoes, carrots and parsnips into wedges.",
+                "Ingredients": [
+                    {
+                        "name": "Potatoes",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Carrots",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Parsnips",
+                        "quantity": 2
+                    }
+                ]
+            },
+            {
+                "text": "Place the vegetables in an oven tray, drizzle with oil and season with salt and pepper. Roast in the oven for 30 to 40 minutes at 180°C until crispy.",
+                "Ingredients": [
+                    {
+                        "name": "Oil"
+                    },
+                    {
+                        "name": "Salt"
+                    },
+                    {
+                        "name": "Pepper"
+                    },
+                    {
+                        "name": "Potatoes",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Carrots",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Parsnips",
+                        "quantity": 2
+                    }
+                ]
+            },
+            {
+                "text": "Cut the pork fillet into thick slices. Season with salt and pepper.",
+                "Ingredients": [
+                    {
+                        "name": "Pork fillet",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Salt"
+                    },
+                    {
+                        "name": "Pepper"
+                    }
+                ]
+            },
+            {
+                "text": "Fry the pork fillet with the butter on a pan until thoroughly cooked. When finished set aside.",
+                "Ingredients": [
+                    {
+                        "name": "Pork fillet",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Butter",
+                        "quantity": 1,
+                        "quantityUnit": "tbsp"
+                    }
+                ]
+            },
+            {
+                "text": "On a clean pan, add the cream, mustard, beef stock, tarragon, pepper and honey. Slowly warm the sauce while stirring frequently.",
+                "Ingredients": [
+                    {
+                        "name": "Single cream",
+                        "quantity": 150,
+                        "quantityUnit": "ml"
+                    },
+                    {
+                        "name": "Milk"
+                    },
+                    {
+                        "name": "Mild Swedish mustard or French mustard",
+                        "quantity": 2,
+                        "quantityUnit": "tbsp"
+                    },
+                    {
+                        "name": "Beef stock",
+                        "quantity": 50,
+                        "quantityUnit": "ml"
+                    },
+                    {
+                        "name": "Tarragon"
+                    },
+                    {
+                        "name": "Pepper"
+                    },
+                    {
+                        "name": "Honey",
+                        "quantity": 1,
+                        "quantityUnit": "tsp"
+                    }
+                ]
+            },
+            {
+                "text": "Return the cooked pork to the mustard sauce and cook for 5 minutes. If the sauce is too thick add a bit of milk.",
+                "Ingredients": [
+                    {
+                        "name": "Milk"
+                    }
+                ]
+            },
+            {
+                "text": "Serve the pork fillet with the roasted vegetables and salad. If desired, garnish with parsley.",
+                "Ingredients": [
+                    {
+                        "name": "Salad"
+                    },
+                    {
+                        "name": "Fresh parsley"
+                    }
+                ]
+            }
+        ]
+    }
+}
