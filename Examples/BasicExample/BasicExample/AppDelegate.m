@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "TBRJSONMapper.h"
+#import "Address.h"
+
 
 @interface AppDelegate ()
 
@@ -16,7 +19,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+   
+    // Load all recipes JSON files
+    TBRJSONMapper *mapper = [[TBRJSONMapper alloc] init];
+    
+    NSString *pathToJSONAddress = @"address";
+
+    Address *newAddress = [mapper objectGraphForJSONResource:pathToJSONAddress
+                                           withRootClassName:@"Address"];
+   
+    NSLog(@"Address; %@", newAddress);
+    
+    
     return YES;
 }
 
