@@ -18,6 +18,9 @@ profile
 *.moved-aside
 DerivedData
 .idea/
+
+Examples/BasicExample/BasicExample.xcodeproj/project.xcworkspace/xcshareddata/
+
 # Pods - for those of you who use CocoaPods
 #Pods
 Pods/Pods.xcodeproj/project.xcworkspace/contents.xcworkspacedata
