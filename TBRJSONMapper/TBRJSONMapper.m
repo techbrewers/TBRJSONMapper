@@ -6,19 +6,41 @@
 //  Copyright (c) 2015 TechBrewers. All rights reserved.
 //
 
-#import "JSONMapper.h"
-#import "Recipe.h"
-#import "NSString+Utilities.h"
+#import "TBRJSONMapper.h"
+//#import "NSString+Utilities.h"
 
-@implementation JSONMapper
+#define pragma mark - Utility category
+@interface NSString (Utilities)
+- (NSString *)lowercaseFirstLetter;
+@end
 
-// REMOVE this method
-- (id)objectGraphForJSONResource:(NSString *)resourcePath
+@implementation NSString (Utilities)
+
+
+#pragma mark - NSString (Utilities) Public methods
+- (NSString *)lowercaseFirstLetter
 {
-    return [self objectGraphForJSONResource:resourcePath
-                          withRootClassName:@"Recipe"];
-    
+    NSString *firstLetter = [self foldedFirstChracterInString];
+    return [[firstLetter lowercaseString] stringByAppendingString:[self substringFromIndex:1]];
 }
+
+#pragma mark - NSString (Utilities) Private methods
+- (NSString *)foldedFirstChracterInString
+{
+    // Ceate a locale where diacritic marks are not considered important, e.g. US English
+    NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en-US"];
+    
+    NSString *firstChar = [self substringToIndex:1];
+    
+    // Remove any diacritic mark
+    NSString *folded = [firstChar stringByFoldingWithOptions:NSDiacriticInsensitiveSearch locale:locale];
+    return folded;
+}
+
+@end
+
+#pragma mark - TBRJSONMapper implementation methods
+@implementation TBRJSONMapper
 
 - (id)objectGraphForJSONResource:(NSString *)resourcePath withRootClassName:(NSString *)className
 {
@@ -35,12 +57,6 @@
 
 // ADD Method for local cache directory to example
 
-// Remove this method
-- (id)objectGraphForJSONData:(NSData *)data
-{
-    return [self objectGraphForJSONData:data
-                      withRootClassName:@"Recipe"];
-}
 
 - (id)objectGraphForJSONData:(NSData *)data withRootClassName:(NSString*)className
 {
@@ -128,26 +144,8 @@
             
         }
     }
-
-#define pragma mark - Utility methods
-- (NSString *)lowerCaseFirstLetter:(NSString *)input
-{
-    /* create a locale where diacritic marks are not considered important, e.g. US English */
-    NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en-US"];
-    
-    /* get first char */
-    NSString *firstChar = [input substringToIndex:1];
-    
-    /* remove any diacritic mark */
-    NSString *folded = [firstChar stringByFoldingWithOptions:NSDiacriticInsensitiveSearch locale:locale];
-    
-    /* create the new string */
-    return [[folded lowercaseString] stringByAppendingString:[input substringFromIndex:1]];
-}
-
-
-
-
 }
 
 @end
+
+
