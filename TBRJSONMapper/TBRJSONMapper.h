@@ -9,6 +9,10 @@
 
 @interface TBRJSONMapper: NSObject
 
+@property (copy, nonatomic) NSString *swiftModuleName;
+
+- (instancetype)initWithSwiftModuleName:(NSString *)swiftModuleName;
+
 - (id)objectGraphForJSONResource:(NSString *)resourcePath withRootClassName:(NSString *)className;
 - (id)objectGraphForJSONData:(NSData *)data withRootClassName:(NSString*)className;
 

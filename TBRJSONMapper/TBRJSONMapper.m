@@ -7,7 +7,6 @@
 //
 
 #import "TBRJSONMapper.h"
-//#import "NSString+Utilities.h"
 
 #define pragma mark - Utility category
 @interface NSString (Utilities)
@@ -42,12 +41,22 @@
 #pragma mark - TBRJSONMapper implementation methods
 @implementation TBRJSONMapper
 
+- (instancetype)initWithSwiftModuleName:(NSString *)swiftModuleName
+{
+    self = [super init];
+    if (self) {
+        _swiftModuleName = [swiftModuleName stringByAppendingString:@"."];
+    }
+    
+    return self;
+}
+
 - (id)objectGraphForJSONResource:(NSString *)resourcePath withRootClassName:(NSString *)className
 {
     NSString *jsonFilePath =
     [[NSBundle mainBundle] pathForResource:resourcePath ofType:@"json"];
     NSData *data = [[NSFileManager defaultManager] contentsAtPath:jsonFilePath];
-   
+    
     // Shouldn't it return nil instead?
     NSAssert(data != nil, @"Unable to load JSON file.");
     
@@ -57,20 +66,33 @@
 
 // ADD Method for local cache directory to example
 
+- (id)instantiateClassFromName:(NSString *)className
+{
+    Class rootObjectClass = NSClassFromString(className);
+    
+    // If class doesn't exist, it might be a swift class
+    if (!rootObjectClass) {
+        NSString *swiftClassName = [self.swiftModuleName stringByAppendingString:className];
+        rootObjectClass = NSClassFromString(swiftClassName);
+    }
+    
+    id newObject = [[rootObjectClass alloc] init];
+    NSAssert(newObject != nil, @"Unable to instantiate class:%@", className);
+    
+    return newObject;
+    
+}
 
 - (id)objectGraphForJSONData:(NSData *)data withRootClassName:(NSString*)className
 {
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
     
     NSDictionary *objectDictionary = [json objectForKey:className];
-
+    
     NSAssert(objectDictionary != nil, @"Unable to load dictionary for class:%@", className);
     
     // Instantiate a new root object
-    Class rootObjectClass = NSClassFromString(className);
-    id newObject = [[rootObjectClass alloc] init];
-
-    NSAssert(newObject != nil, @"Unable to instantiate class:%@", className);
+    id newObject = [self instantiateClassFromName:className];
     
     [self processObject:newObject withDictionary:objectDictionary];
     
@@ -93,8 +115,8 @@
                              forKey:key];
             }
         } else { // if uppercase then it's an embedded object and requires a new class.
-           
-           
+            
+            
             // Is it a one-to-one or a one-to-many relationship?
             
             // if it has an array it's a one-to-many
@@ -106,22 +128,18 @@
                 NSMutableArray *oneToManyRelationship = [[NSMutableArray alloc]
                                                          init];
                 
-                  // The class for the object in the relationship wouldn't be plural.
-                  // So for example, if the key is Ingredients, the object
-                  // class must be Ingredient
-                  NSString *className = [key substringToIndex:[key length] - 1];
-                 Class embeddedObjectClass = NSClassFromString(className);
+                // The class for the object in the relationship wouldn't be plural.
+                // So for example, if the key is Ingredients, the object
+                // class must be Ingredient
+                NSString *className = [key substringToIndex:[key length] - 1];
                 
-                
-                 for (NSDictionary *dictionary in oneToManyArray) {
+                for (NSDictionary *dictionary in oneToManyArray) {
                     
-                  
+                    
                     // Create new object based on the class name.
-                    id newEmbeddedObject = [[embeddedObjectClass alloc] init];
+                    id newEmbeddedObject = [self instantiateClassFromName:className];
                     
-                     NSAssert(newEmbeddedObject != nil, @"Unable to instantiate class:%@", className);
-                    
-                     [self processObject:newEmbeddedObject
+                    [self processObject:newEmbeddedObject
                          withDictionary:dictionary];
                     
                     // Add to one-to-many array
@@ -138,7 +156,7 @@
             } else { //one-to-one
                 Class embeddedObjectClass = NSClassFromString(key);
                 id newEmbeddedObject = [[embeddedObjectClass alloc] init];
-                     [self processObject:newEmbeddedObject
+                [self processObject:newEmbeddedObject
                      withDictionary:[objectDictionary objectForKey:key]];
             }
             
