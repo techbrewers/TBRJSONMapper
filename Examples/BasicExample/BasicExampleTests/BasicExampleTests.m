@@ -8,16 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "TBRJSONMapper.h"
 
 @interface BasicExampleTests : XCTestCase
 
+@property (strong, nonatomic) NSArray *jsonFiles;
 @end
 
 @implementation BasicExampleTests
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    self.jsonFiles = @[@"address"];
 }
 
 - (void)tearDown {
@@ -28,6 +31,20 @@
 - (void)testExample {
     // This is an example of a functional test case.
     XCTAssert(YES, @"Pass");
+    
+    for (NSString *jsonFile in self.jsonFiles) {
+
+        TBRJSONMapper *mapper = [[TBRJSONMapper alloc] init];
+        
+        id newObject = [mapper objectGraphForJSONResource:jsonFile
+                                        withRootClassName:jsonFile.capitalizedString];
+
+        XCTAssert(newObject != nil);
+        
+    }
+
+ 
+    
 }
 
 - (void)testPerformanceExample {
