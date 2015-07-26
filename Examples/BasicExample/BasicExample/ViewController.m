@@ -7,6 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "TBRJSONMapper.h"
+#import "Address.h"
+#import "Phone.h"
+
+static NSString *const kCellIdentifier = @"basicCell";
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate >
 
@@ -17,13 +22,32 @@
 @property (weak, nonatomic) IBOutlet UILabel *jobTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *partTimeLabel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) Address *currentAddress;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    // Load all recipes JSON files
+    TBRJSONMapper *mapper = [[TBRJSONMapper alloc] init];
+    
+    NSString *pathToJSONAddress = @"address";
+    
+    self.currentAddress = [mapper objectGraphForJSONResource:pathToJSONAddress
+                                           withRootClassName:@"Address"];
+    
+    NSAssert(self.currentAddress != nil, @"Address is nil");
+    
+    self.nameLabel.text = self.currentAddress.name;
+    self.companyLabel.text = self.currentAddress.company;
+    self.usernameLabel.text = self.currentAddress.username;
+    self.emailLabel.text = self.currentAddress.email;
+    self.jobTitleLabel.text = self.currentAddress.jobTitle;
+    self.partTimeLabel.text = ([self.currentAddress.partTime boolValue]) ? @"Yes" : @"No";
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,12 +59,21 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return [self.currentAddress.phones count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return nil;
+    
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:kCellIdentifier];
+   
+    Phone *currentPhone =  self.currentAddress.phones[indexPath.row];
+    NSString *phoneString = [NSString stringWithFormat:@"%@: %@",
+                             currentPhone.type, currentPhone.number];
+    cell.textLabel.text = phoneString;
+    
+    
+    return cell;
 }
 
 
