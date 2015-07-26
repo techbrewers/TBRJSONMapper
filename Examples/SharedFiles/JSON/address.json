@@ -3,7 +3,7 @@
 		"name" : "John Doe",
 		"company" : "Doe Industries plc",
 		"username" : "john_doe",
-		"email" : "johndoe@doeindustries.com",
+		"email" : "john@doeind.com",
 		"jobTitle" :  "Top dog",
 		"partTime" : false,
 		"Phones" : [
