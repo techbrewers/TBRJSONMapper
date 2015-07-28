@@ -21,6 +21,7 @@ DerivedData
 
 Examples/BasicExample/BasicExample.xcodeproj/project.xcworkspace/xcshareddata/
 Examples/SwiftExample/SwiftExample.xcodeproj/project.xcworkspace/
+Tests/UnitTests/UnitTests.xcodeproj/project.xcworkspace/xcshareddata/
 
 # Pods - for those of you who use CocoaPods
 #Pods
