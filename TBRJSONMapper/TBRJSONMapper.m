@@ -154,10 +154,13 @@
                              forKey:key.lowercaseFirstLetter];
                 
             } else { //one-to-one
-                Class embeddedObjectClass = NSClassFromString(key);
-                id newEmbeddedObject = [[embeddedObjectClass alloc] init];
+                id newEmbeddedObject = [self instantiateClassFromName:key];
+                
                 [self processObject:newEmbeddedObject
                      withDictionary:[objectDictionary objectForKey:key]];
+                
+                [newObject setValue:newEmbeddedObject
+                             forKey:key.lowercaseFirstLetter];
             }
             
         }
