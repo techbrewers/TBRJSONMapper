@@ -64,7 +64,14 @@
     
 }
 
-// ADD Method for local cache directory to example
+// Method to load JSON resource from local cache directory to example
+- (id)objectGraphForDownloadedJSONResourcePath:(NSString *)resourceName withRootClassName:(NSString *)className
+{
+    NSData *data = [[NSFileManager defaultManager]
+                    contentsAtPath:resourceName];
+    
+    return [self objectGraphForJSONData:data withRootClassName:className];
+}
 
 - (id)instantiateClassFromName:(NSString *)className
 {

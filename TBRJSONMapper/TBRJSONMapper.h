@@ -15,5 +15,6 @@
 
 - (id)objectGraphForJSONResource:(NSString *)resourcePath withRootClassName:(NSString *)className;
 - (id)objectGraphForJSONData:(NSData *)data withRootClassName:(NSString*)className;
+- (id)objectGraphForDownloadedJSONResourcePath:(NSString *)resourceName withRootClassName:(NSString *)className;
 
 @end
