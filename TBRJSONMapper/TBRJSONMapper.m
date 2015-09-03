@@ -19,12 +19,12 @@
 #pragma mark - NSString (Utilities) Public methods
 - (NSString *)lowercaseFirstLetter
 {
-    NSString *firstLetter = [self foldedFirstChracterInString];
+    NSString *firstLetter = [self foldedFirstCharacterInString];
     return [[firstLetter lowercaseString] stringByAppendingString:[self substringFromIndex:1]];
 }
 
 #pragma mark - NSString (Utilities) Private methods
-- (NSString *)foldedFirstChracterInString
+- (NSString *)foldedFirstCharacterInString
 {
     // Ceate a locale where diacritic marks are not considered important, e.g. US English
     NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en-US"];
@@ -33,6 +33,7 @@
     
     // Remove any diacritic mark
     NSString *folded = [firstChar stringByFoldingWithOptions:NSDiacriticInsensitiveSearch locale:locale];
+    
     return folded;
 }
 
