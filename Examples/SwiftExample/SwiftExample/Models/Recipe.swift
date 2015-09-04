@@ -8,13 +8,12 @@
 
 import Foundation
 
-@objc class Recipe: NSObject {
+class Recipe: NSObject {
    
     // Properties stored in the JSON file
     var title: String
     var subtitle: String
     var category: String
-    var ingredients: [Ingredient]
     
     var difficulty: Int
     var abstract: String?
@@ -27,19 +26,16 @@ import Foundation
         self.subtitle = ""
         self.category = ""
         self.difficulty = 1
-        self.ingredients = []
         self.steps = []
         self.time = 0
     }
     
-   init(title: String, subtitle: String, ingredients: [Ingredient]? = [],
-        steps: [Step]? = [], category: String? = "Unasigned",
-        difficulty: Int? = 1) {
+   init(title: String, subtitle: String, steps: [Step]? = [],
+        category: String? = "Unasigned", difficulty: Int? = 1) {
             self.title = title
             self.subtitle = subtitle
             self.category = category!
             self.difficulty = difficulty!
-            self.ingredients = ingredients!
             self.steps = steps!
             self.time = 0
     }
