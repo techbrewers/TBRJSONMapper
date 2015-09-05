@@ -17,6 +17,9 @@
 		4D7D1AA81B6689E900E58949 /* fleskfile_recipe.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D7D1AA51B6689E900E58949 /* fleskfile_recipe.json */; };
 		4D7D1AA91B6689E900E58949 /* kalops_recipe.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D7D1AA61B6689E900E58949 /* kalops_recipe.json */; };
 		4D7D1AAA1B6689E900E58949 /* kotbullar_recipe.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D7D1AA71B6689E900E58949 /* kotbullar_recipe.json */; };
+		4DF51CBC1B98AB4B00D86979 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF51CBB1B98AB4B00D86979 /* Recipe.swift */; };
+		4DF51CBE1B98ABFE00D86979 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF51CBD1B98ABFE00D86979 /* Step.swift */; };
+		4DF51CC01B98AC2100D86979 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF51CBF1B98AC2100D86979 /* Ingredient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		4D7D1AA51B6689E900E58949 /* fleskfile_recipe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = fleskfile_recipe.json; path = ../../SharedFiles/JSON/fleskfile_recipe.json; sourceTree = "<group>"; };
 		4D7D1AA61B6689E900E58949 /* kalops_recipe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = kalops_recipe.json; path = ../../SharedFiles/JSON/kalops_recipe.json; sourceTree = "<group>"; };
 		4D7D1AA71B6689E900E58949 /* kotbullar_recipe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = kotbullar_recipe.json; path = ../../SharedFiles/JSON/kotbullar_recipe.json; sourceTree = "<group>"; };
+		4DF51CBB1B98AB4B00D86979 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Recipe.swift; path = Models/Recipe.swift; sourceTree = "<group>"; };
+		4DF51CBD1B98ABFE00D86979 /* Step.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Step.swift; path = Models/Step.swift; sourceTree = "<group>"; };
+		4DF51CBF1B98AC2100D86979 /* Ingredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Ingredient.swift; path = Models/Ingredient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,7 @@
 		4D7D1A7A1B66894800E58949 /* SwiftExample */ = {
 			isa = PBXGroup;
 			children = (
+				4DF51CBA1B98AB2F00D86979 /* Models */,
 				4D7D1A9D1B66896F00E58949 /* TBRJSONMapper */,
 				4D7D1AA21B6689AC00E58949 /* Classes */,
 				4D7D1AA31B6689C300E58949 /* Resources */,
@@ -160,6 +167,16 @@
 			name = JSON;
 			sourceTree = "<group>";
 		};
+		4DF51CBA1B98AB2F00D86979 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4DF51CBB1B98AB4B00D86979 /* Recipe.swift */,
+				4DF51CBD1B98ABFE00D86979 /* Step.swift */,
+				4DF51CBF1B98AC2100D86979 /* Ingredient.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -204,6 +221,7 @@
 		4D7D1A701B66894800E58949 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = TechBrewers;
 				TargetAttributes = {
@@ -265,7 +283,10 @@
 			files = (
 				4D7D1AA11B66898B00E58949 /* TBRJSONMapper.m in Sources */,
 				4D7D1A801B66894800E58949 /* ViewController.swift in Sources */,
+				4DF51CC01B98AC2100D86979 /* Ingredient.swift in Sources */,
+				4DF51CBE1B98ABFE00D86979 /* Step.swift in Sources */,
 				4D7D1A7E1B66894800E58949 /* AppDelegate.swift in Sources */,
+				4DF51CBC1B98AB4B00D86979 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +489,7 @@
 				4D7D1A991B66894800E58949 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D7D1A9A1B66894800E58949 /* Build configuration list for PBXNativeTarget "SwiftExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -476,6 +498,7 @@
 				4D7D1A9C1B66894800E58949 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
