@@ -9,18 +9,53 @@
         <scene sceneID="O4A-uH-EQr">
             <objects>
                 <tableViewController id="5pD-Jc-SNT" customClass="RecipesTableViewController" customModule="SwiftExample" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="r5u-6p-laF">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="236" sectionHeaderHeight="40" sectionFooterHeight="28" id="r5u-6p-laF">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="HTC-yf-yuY" customClass="RecipesTableViewCell" customModule="SwiftExample" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeTableViewCell" rowHeight="236" id="HTC-yf-yuY" customClass="RecipesTableViewCell" customModule="SwiftExample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="40" width="600" height="236"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HTC-yf-yuY" id="W0O-Bx-SIE">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="236"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Pork fillet in mustard sauce" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFR-pS-mwJ">
+                                            <rect key="frame" x="8" y="57" width="195" height="22"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A traditional Swedish recipe of pork fillet in a mustard cream sauce served with mixed roasted vegetables and salad." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUI-j0-XZ5">
+                                            <rect key="frame" x="8" y="87" width="584" height="141"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Fläskfilé med senapssås" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIk-ML-wIT">
+                                            <rect key="frame" x="8" y="16" width="266" height="33"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                            <color key="textColor" red="1" green="0.39607843139999999" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ZFR-pS-mwJ" firstAttribute="top" secondItem="EIk-ML-wIT" secondAttribute="bottom" constant="8" id="3mP-iY-d5s"/>
+                                        <constraint firstItem="ZFR-pS-mwJ" firstAttribute="leading" secondItem="W0O-Bx-SIE" secondAttribute="leading" constant="8" id="3tf-zH-Bl4"/>
+                                        <constraint firstItem="iUI-j0-XZ5" firstAttribute="top" secondItem="ZFR-pS-mwJ" secondAttribute="bottom" constant="8" id="7DG-Xq-t2E"/>
+                                        <constraint firstItem="EIk-ML-wIT" firstAttribute="leading" secondItem="W0O-Bx-SIE" secondAttribute="leading" constant="8" id="O5y-8i-Bd7"/>
+                                        <constraint firstItem="iUI-j0-XZ5" firstAttribute="leading" secondItem="W0O-Bx-SIE" secondAttribute="leading" constant="8" id="Q6a-bG-mnX"/>
+                                        <constraint firstAttribute="trailing" secondItem="iUI-j0-XZ5" secondAttribute="trailing" constant="8" id="TqP-mH-aDA"/>
+                                        <constraint firstAttribute="bottom" secondItem="iUI-j0-XZ5" secondAttribute="bottom" constant="8" id="ZWR-DE-biH"/>
+                                        <constraint firstItem="EIk-ML-wIT" firstAttribute="top" secondItem="W0O-Bx-SIE" secondAttribute="top" constant="16" id="wY7-lq-PtZ"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="abstractLabel" destination="iUI-j0-XZ5" id="ySe-Rb-j4p"/>
+                                    <outlet property="subtitleLabel" destination="ZFR-pS-mwJ" id="l5a-hL-HC2"/>
+                                    <outlet property="titleLabel" destination="EIk-ML-wIT" id="dPW-6p-uIO"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -31,7 +66,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVf-wh-4Dc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="374" y="453"/>
+            <point key="canvasLocation" x="256" y="477"/>
         </scene>
     </scenes>
 </document>

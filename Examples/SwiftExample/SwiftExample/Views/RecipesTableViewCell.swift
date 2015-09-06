@@ -10,6 +10,10 @@ import UIKit
 
 class RecipesTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet weak var abstractLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +23,12 @@ class RecipesTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func configure(recipe: Recipe) {
+        titleLabel.text = recipe.title
+        subtitleLabel.text = recipe.subtitle
+        abstractLabel.text = recipe.abstract
     }
 
 }

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D5C0E091B9C4A1B00CD6791 /* RecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0E081B9C4A1B00CD6791 /* RecipesTableViewController.swift */; };
-		4D5C0E0C1B9C4A4100CD6791 /* RecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0E0B1B9C4A4100CD6791 /* RecipesTableViewCell.swift */; };
+		4D5C0E0D1B9C4D8C00CD6791 /* RecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0E0B1B9C4A4100CD6791 /* RecipesTableViewCell.swift */; };
+		4D5C0E0E1B9C4DB300CD6791 /* RecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0E081B9C4A1B00CD6791 /* RecipesTableViewController.swift */; };
 		4D7D1A7E1B66894800E58949 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D1A7D1B66894800E58949 /* AppDelegate.swift */; };
 		4D7D1A831B66894800E58949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D7D1A811B66894800E58949 /* Main.storyboard */; };
 		4D7D1A851B66894800E58949 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D7D1A841B66894800E58949 /* Images.xcassets */; };
@@ -293,8 +293,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D7D1AA11B66898B00E58949 /* TBRJSONMapper.m in Sources */,
-				4D5C0E091B9C4A1B00CD6791 /* RecipesTableViewController.swift in Sources */,
-				4D5C0E0C1B9C4A4100CD6791 /* RecipesTableViewCell.swift in Sources */,
+				4D5C0E0E1B9C4DB300CD6791 /* RecipesTableViewController.swift in Sources */,
+				4D5C0E0D1B9C4D8C00CD6791 /* RecipesTableViewCell.swift in Sources */,
 				4DF51CC01B98AC2100D86979 /* Ingredient.swift in Sources */,
 				4DF51CBE1B98ABFE00D86979 /* Step.swift in Sources */,
 				4D7D1A7E1B66894800E58949 /* AppDelegate.swift in Sources */,
