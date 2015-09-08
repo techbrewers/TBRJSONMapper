@@ -18,6 +18,8 @@
 		4D7D1AA81B6689E900E58949 /* fleskfile_recipe.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D7D1AA51B6689E900E58949 /* fleskfile_recipe.json */; };
 		4D7D1AA91B6689E900E58949 /* kalops_recipe.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D7D1AA61B6689E900E58949 /* kalops_recipe.json */; };
 		4D7D1AAA1B6689E900E58949 /* kotbullar_recipe.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D7D1AA71B6689E900E58949 /* kotbullar_recipe.json */; };
+		4D8A64E31B9C5250000403AD /* StepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A64E21B9C5250000403AD /* StepTableViewCell.swift */; };
+		4D8A64E51B9C52B2000403AD /* StepsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A64E41B9C52B2000403AD /* StepsTableViewController.swift */; };
 		4DF51CBC1B98AB4B00D86979 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF51CBB1B98AB4B00D86979 /* Recipe.swift */; };
 		4DF51CBE1B98ABFE00D86979 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF51CBD1B98ABFE00D86979 /* Step.swift */; };
 		4DF51CC01B98AC2100D86979 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF51CBF1B98AC2100D86979 /* Ingredient.swift */; };
@@ -51,6 +53,8 @@
 		4D7D1AA51B6689E900E58949 /* fleskfile_recipe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = fleskfile_recipe.json; path = ../../SharedFiles/JSON/fleskfile_recipe.json; sourceTree = "<group>"; };
 		4D7D1AA61B6689E900E58949 /* kalops_recipe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = kalops_recipe.json; path = ../../SharedFiles/JSON/kalops_recipe.json; sourceTree = "<group>"; };
 		4D7D1AA71B6689E900E58949 /* kotbullar_recipe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = kotbullar_recipe.json; path = ../../SharedFiles/JSON/kotbullar_recipe.json; sourceTree = "<group>"; };
+		4D8A64E21B9C5250000403AD /* StepTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StepTableViewCell.swift; path = Views/StepTableViewCell.swift; sourceTree = "<group>"; };
+		4D8A64E41B9C52B2000403AD /* StepsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StepsTableViewController.swift; path = Controllers/StepsTableViewController.swift; sourceTree = "<group>"; };
 		4DF51CBB1B98AB4B00D86979 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Recipe.swift; path = Models/Recipe.swift; sourceTree = "<group>"; };
 		4DF51CBD1B98ABFE00D86979 /* Step.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Step.swift; path = Models/Step.swift; sourceTree = "<group>"; };
 		4DF51CBF1B98AC2100D86979 /* Ingredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Ingredient.swift; path = Models/Ingredient.swift; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				4D5C0E0B1B9C4A4100CD6791 /* RecipesTableViewCell.swift */,
+				4D8A64E21B9C5250000403AD /* StepTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -103,9 +108,9 @@
 		4D7D1A7A1B66894800E58949 /* SwiftExample */ = {
 			isa = PBXGroup;
 			children = (
+				4D7D1A9D1B66896F00E58949 /* TBRJSONMapper */,
 				4D5C0E0A1B9C4A2600CD6791 /* Views */,
 				4DF51CBA1B98AB2F00D86979 /* Models */,
-				4D7D1A9D1B66896F00E58949 /* TBRJSONMapper */,
 				4D7D1AA21B6689AC00E58949 /* Controllers */,
 				4D7D1AA31B6689C300E58949 /* Resources */,
 				4D7D1A861B66894800E58949 /* LaunchScreen.xib */,
@@ -154,6 +159,7 @@
 			children = (
 				4D7D1A7D1B66894800E58949 /* AppDelegate.swift */,
 				4D5C0E081B9C4A1B00CD6791 /* RecipesTableViewController.swift */,
+				4D8A64E41B9C52B2000403AD /* StepsTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -293,6 +299,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D7D1AA11B66898B00E58949 /* TBRJSONMapper.m in Sources */,
+				4D8A64E51B9C52B2000403AD /* StepsTableViewController.swift in Sources */,
+				4D8A64E31B9C5250000403AD /* StepTableViewCell.swift in Sources */,
 				4D5C0E0E1B9C4DB300CD6791 /* RecipesTableViewController.swift in Sources */,
 				4D5C0E0D1B9C4D8C00CD6791 /* RecipesTableViewCell.swift in Sources */,
 				4DF51CC01B98AC2100D86979 /* Ingredient.swift in Sources */,

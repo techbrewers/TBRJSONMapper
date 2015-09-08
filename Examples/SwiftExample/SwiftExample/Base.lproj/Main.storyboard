@@ -63,10 +63,71 @@
                             <outlet property="delegate" destination="5pD-Jc-SNT" id="UCG-Oz-Ypd"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="RmV-Hv-eJL" kind="show" identifier="StepsTableViewController" id="V3S-bo-WXw"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVf-wh-4Dc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="256" y="477"/>
+        </scene>
+        <!--Steps Table View Controller-->
+        <scene sceneID="Q8l-H0-rfG">
+            <objects>
+                <tableViewController id="RmV-Hv-eJL" customClass="StepsTableViewController" customModule="SwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="159" sectionHeaderHeight="28" sectionFooterHeight="28" id="sTZ-sP-GDm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StepCell" rowHeight="159" id="L68-Nn-ffy" customClass="StepTableViewCell" customModule="SwiftExample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="159"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L68-Nn-ffy" id="CQt-Im-ZO9">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="158"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27M-ZR-hh7">
+                                            <rect key="frame" x="8" y="16" width="24" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="24" id="nDm-RM-v4h"/>
+                                                <constraint firstAttribute="height" constant="24" id="tDt-fH-3K5"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                                            <color key="textColor" red="0.73333333329999995" green="0.090196078430000007" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJ5-Vb-TDF">
+                                            <rect key="frame" x="40" y="16" width="552" height="134"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="27M-ZR-hh7" firstAttribute="leading" secondItem="CQt-Im-ZO9" secondAttribute="leading" constant="8" id="V1f-Kk-TFW"/>
+                                        <constraint firstItem="dJ5-Vb-TDF" firstAttribute="leading" secondItem="27M-ZR-hh7" secondAttribute="trailing" constant="8" id="Vr3-7U-Zaa"/>
+                                        <constraint firstItem="27M-ZR-hh7" firstAttribute="top" secondItem="CQt-Im-ZO9" secondAttribute="top" constant="16" id="jBf-4Y-PLo"/>
+                                        <constraint firstAttribute="bottom" secondItem="dJ5-Vb-TDF" secondAttribute="bottom" constant="8" id="l1u-tw-Vch"/>
+                                        <constraint firstItem="dJ5-Vb-TDF" firstAttribute="top" secondItem="CQt-Im-ZO9" secondAttribute="top" constant="16" id="suU-gS-RBr"/>
+                                        <constraint firstAttribute="trailing" secondItem="dJ5-Vb-TDF" secondAttribute="trailing" constant="8" id="z0X-5m-95C"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="stepNumberLabel" destination="27M-ZR-hh7" id="B5A-RO-OwK"/>
+                                    <outlet property="stepTextLabel" destination="dJ5-Vb-TDF" id="rKj-WP-Q9c"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="RmV-Hv-eJL" id="2ge-Mq-9cR"/>
+                            <outlet property="delegate" destination="RmV-Hv-eJL" id="MDW-V1-iKt"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tpd-Ds-cua" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="937" y="477"/>
         </scene>
     </scenes>
 </document>

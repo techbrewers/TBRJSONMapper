@@ -10,15 +10,13 @@ import UIKit
 
 class StepTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var stepTextLabel: UILabel!
+    @IBOutlet weak var stepNumberLabel: UILabel!
+    
+    func configure(step: Step, stepIndex: Int) {
+        stepNumberLabel.text = "\(stepIndex + 1)"
+        stepTextLabel.text = step.text
     }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    
 
 }
