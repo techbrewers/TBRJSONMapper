@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5pD-Jc-SNT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Sb7-2q-z1K">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Recipes Table View Controller-->
+        <!--Recipes-->
         <scene sceneID="O4A-uH-EQr">
             <objects>
                 <tableViewController id="5pD-Jc-SNT" customClass="RecipesTableViewController" customModule="SwiftExample" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,7 +15,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeTableViewCell" rowHeight="236" id="HTC-yf-yuY" customClass="RecipesTableViewCell" customModule="SwiftExample" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="40" width="600" height="236"/>
+                                <rect key="frame" x="0.0" y="104" width="600" height="236"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HTC-yf-yuY" id="W0O-Bx-SIE">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="236"/>
@@ -63,25 +63,26 @@
                             <outlet property="delegate" destination="5pD-Jc-SNT" id="UCG-Oz-Ypd"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Recipes" id="1K0-1m-7cc"/>
                     <connections>
                         <segue destination="RmV-Hv-eJL" kind="show" identifier="StepsTableViewController" id="V3S-bo-WXw"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVf-wh-4Dc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="256" y="477"/>
+            <point key="canvasLocation" x="1068" y="477"/>
         </scene>
-        <!--Steps Table View Controller-->
+        <!--Steps-->
         <scene sceneID="Q8l-H0-rfG">
             <objects>
-                <tableViewController id="RmV-Hv-eJL" customClass="StepsTableViewController" customModule="SwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Steps" id="RmV-Hv-eJL" customClass="StepsTableViewController" customModule="SwiftExample" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="159" sectionHeaderHeight="28" sectionFooterHeight="28" id="sTZ-sP-GDm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StepCell" rowHeight="159" id="L68-Nn-ffy" customClass="StepTableViewCell" customModule="SwiftExample" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="159"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="159"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L68-Nn-ffy" id="CQt-Im-ZO9">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="158"/>
@@ -127,7 +128,25 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tpd-Ds-cua" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="937" y="477"/>
+            <point key="canvasLocation" x="1749" y="477"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cbb-Lu-Vsn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Sb7-2q-z1K" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CPH-bB-Ia2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5pD-Jc-SNT" kind="relationship" relationship="rootViewController" id="DEW-HA-y4I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xar-y8-rKH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="256" y="477"/>
         </scene>
     </scenes>
 </document>
