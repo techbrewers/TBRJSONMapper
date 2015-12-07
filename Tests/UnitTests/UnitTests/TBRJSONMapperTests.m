@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "TBRJSONMapper.h"
 
 @interface UnitTestsTests : XCTestCase
+
+@property (strong, nonatomic) NSArray *jsonFiles;
+@property (strong, nonatomic) NSArray *classNames;
 
 @end
 
@@ -17,18 +21,69 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    self.jsonFiles = @[@"address",
+                       @"fleskfile_recipe",
+                       @"kalops_recipe",
+                       @"kotbullar_recipe"
+                       ];
+    
+    self.classNames = @[@"Address",
+                        @"Recipe",
+                        @"Recipe",
+                        @"Recipe"
+                        ];
+    
+    
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    self.jsonFiles = nil;
+    
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+- (void)testLoadJSONFiles {
+    
+    for (NSString *jsonFile in self.jsonFiles) {
+        
+        NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+        NSString *jsonFilePath = [bundle pathForResource:jsonFile ofType:@"json"];
+        
+        TBRJSONMapper *mapper = [[TBRJSONMapper alloc] init];
+        
+        NSString *className = @"Address";
+        if ([jsonFile containsString:@"recipe"]) {
+            className = @"Recipe";
+        }
+        
+        id newObject = [mapper
+                        objectGraphForDownloadedJSONResourcePath:jsonFilePath
+                                               withRootClassName:className];
+        
+        
+        
+        XCTAssert(newObject != nil);
+    }
 }
+
+- (void)testFailIfIncorrectFilename {
+    
+}
+
+- (void)testCorrectData {
+    
+}
+
+- (void)testOneToMany {
+    
+}
+
+- (void)testOneToOne {
+    
+}
+
+
 
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
