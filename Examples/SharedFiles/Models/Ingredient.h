@@ -14,6 +14,5 @@
 @property (nonatomic, strong) NSNumber *quantity;
 @property (nonatomic, copy) NSString *quantityUnit;
 
-- (NSString *)displayedQuantityWithMultiplier:(NSUInteger)multiplier;
 
 @end
