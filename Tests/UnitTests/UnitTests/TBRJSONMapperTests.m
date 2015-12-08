@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 #import "TBRJSONMapper.h"
+#import "Address.h"
+#import "Phone.h"
 
 @interface UnitTestsTests : XCTestCase
 
@@ -67,15 +69,39 @@
     }
 }
 
-- (void)testFailIfIncorrectFilename {
-    
-}
 
 - (void)testCorrectData {
     
+    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+    NSString *jsonFilePath = [bundle pathForResource:self.jsonFiles[0] ofType:@"json"];
+    
+    TBRJSONMapper *mapper = [[TBRJSONMapper alloc] init];
+    
+    Address *newAddress = [mapper
+                    objectGraphForDownloadedJSONResourcePath:jsonFilePath
+                    withRootClassName:@"Address"];
+    
+
+    XCTAssert(newAddress != nil);
+    XCTAssert([newAddress.name isEqualToString:@"John Doe"]);
+    XCTAssert([newAddress.username isEqualToString:@"john_doe"]);
+    XCTAssert([newAddress.email isEqualToString:@"john@doeind.com"]);
+    XCTAssert(![newAddress.partTime boolValue]);
+    
+    for (Phone *phone in newAddress.phones) {
+        
+        XCTAssert([phone.type isEqualToString:@"office"] ||
+                  [phone.type isEqualToString:@"mobile"] ||
+                  [phone.type isEqualToString:@"home"]);
+    }
 }
 
 - (void)testOneToMany {
+    
+    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+    NSString *jsonFilePath = [bundle pathForResource:self.jsonFiles[1] ofType:@"json"];
+    
+    TBRJSONMapper *mapper = [[TBRJSONMapper alloc] init];
     
 }
 
