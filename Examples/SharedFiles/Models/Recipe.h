@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+@class Ingredient;
 
 @interface Recipe : NSObject
 
@@ -18,6 +19,8 @@
 @property (nonatomic, strong) NSNumber *time;
 @property (nonatomic, copy) NSString *category;
 @property (nonatomic, copy) NSString *copyright;
+@property (nonatomic, strong) Ingredient *ingredient;
+
 @property (nonatomic, copy) NSArray *steps;
 @property (nonatomic, strong) NSNumber *stepImagesAvailable;
 
