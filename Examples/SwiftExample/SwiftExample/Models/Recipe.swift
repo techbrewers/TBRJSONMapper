@@ -21,6 +21,8 @@ class Recipe: NSObject {
     var time: Int
     var steps: [Step]
     
+    var ingredient: Ingredient?
+    
     override init() {
         self.title = ""
         self.subtitle = ""
