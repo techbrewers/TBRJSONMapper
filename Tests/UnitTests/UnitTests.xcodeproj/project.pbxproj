@@ -10,6 +10,15 @@
 		4D7D1ADE1B67DBAD00E58949 /* TBRJSONMapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D1ADD1B67DBAD00E58949 /* TBRJSONMapperTests.m */; };
 		4D7D1AE01B67DBBA00E58949 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D7D1ADF1B67DBBA00E58949 /* Info.plist */; };
 		4D7D1AE41B67DC1200E58949 /* TBRJSONMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D1AE31B67DC1200E58949 /* TBRJSONMapper.m */; };
+		4DCA4C851C56C6C5002B9C06 /* address.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DCA4C7A1C56C0A6002B9C06 /* address.json */; };
+		4DCA4C861C56C6C7002B9C06 /* fleskfile_recipe.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DCA4C7B1C56C0A6002B9C06 /* fleskfile_recipe.json */; };
+		4DCA4C871C56C6C8002B9C06 /* kalops_recipe.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DCA4C7C1C56C0A6002B9C06 /* kalops_recipe.json */; };
+		4DCA4C881C56C6CA002B9C06 /* kotbullar_recipe.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DCA4C7D1C56C0A6002B9C06 /* kotbullar_recipe.json */; };
+		4DCA4C931C56C6D9002B9C06 /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA4C8A1C56C6D9002B9C06 /* Address.m */; };
+		4DCA4C951C56C6D9002B9C06 /* Phone.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA4C8E1C56C6D9002B9C06 /* Phone.m */; };
+		4DCA4C981C56CD80002B9C06 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA4C901C56C6D9002B9C06 /* Recipe.m */; };
+		4DCA4C991C56CF11002B9C06 /* Ingredient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA4C8C1C56C6D9002B9C06 /* Ingredient.m */; };
+		4DCA4C9A1C56CF30002B9C06 /* Step.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA4C921C56C6D9002B9C06 /* Step.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +27,20 @@
 		4D7D1ADF1B67DBBA00E58949 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = UnitTests/Info.plist; sourceTree = SOURCE_ROOT; };
 		4D7D1AE21B67DC1200E58949 /* TBRJSONMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBRJSONMapper.h; path = ../../TBRJSONMapper/TBRJSONMapper.h; sourceTree = "<group>"; };
 		4D7D1AE31B67DC1200E58949 /* TBRJSONMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBRJSONMapper.m; path = ../../TBRJSONMapper/TBRJSONMapper.m; sourceTree = "<group>"; };
+		4DCA4C7A1C56C0A6002B9C06 /* address.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = address.json; path = ../../Examples/SharedFiles/JSON/address.json; sourceTree = "<group>"; };
+		4DCA4C7B1C56C0A6002B9C06 /* fleskfile_recipe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = fleskfile_recipe.json; path = ../../Examples/SharedFiles/JSON/fleskfile_recipe.json; sourceTree = "<group>"; };
+		4DCA4C7C1C56C0A6002B9C06 /* kalops_recipe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = kalops_recipe.json; path = ../../Examples/SharedFiles/JSON/kalops_recipe.json; sourceTree = "<group>"; };
+		4DCA4C7D1C56C0A6002B9C06 /* kotbullar_recipe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = kotbullar_recipe.json; path = ../../Examples/SharedFiles/JSON/kotbullar_recipe.json; sourceTree = "<group>"; };
+		4DCA4C891C56C6D9002B9C06 /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Address.h; path = ../../Examples/SharedFiles/Models/Address.h; sourceTree = "<group>"; };
+		4DCA4C8A1C56C6D9002B9C06 /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Address.m; path = ../../Examples/SharedFiles/Models/Address.m; sourceTree = "<group>"; };
+		4DCA4C8B1C56C6D9002B9C06 /* Ingredient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Ingredient.h; path = ../../Examples/SharedFiles/Models/Ingredient.h; sourceTree = "<group>"; };
+		4DCA4C8C1C56C6D9002B9C06 /* Ingredient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Ingredient.m; path = ../../Examples/SharedFiles/Models/Ingredient.m; sourceTree = "<group>"; };
+		4DCA4C8D1C56C6D9002B9C06 /* Phone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Phone.h; path = ../../Examples/SharedFiles/Models/Phone.h; sourceTree = "<group>"; };
+		4DCA4C8E1C56C6D9002B9C06 /* Phone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Phone.m; path = ../../Examples/SharedFiles/Models/Phone.m; sourceTree = "<group>"; };
+		4DCA4C8F1C56C6D9002B9C06 /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Recipe.h; path = ../../Examples/SharedFiles/Models/Recipe.h; sourceTree = "<group>"; };
+		4DCA4C901C56C6D9002B9C06 /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Recipe.m; path = ../../Examples/SharedFiles/Models/Recipe.m; sourceTree = "<group>"; };
+		4DCA4C911C56C6D9002B9C06 /* Step.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Step.h; path = ../../Examples/SharedFiles/Models/Step.h; sourceTree = "<group>"; };
+		4DCA4C921C56C6D9002B9C06 /* Step.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Step.m; path = ../../Examples/SharedFiles/Models/Step.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +57,7 @@
 		4D7D1AAB1B67D99700E58949 = {
 			isa = PBXGroup;
 			children = (
+				4DCA4C841C56C6A3002B9C06 /* Models */,
 				4D7D1AE11B67DBFC00E58949 /* TBRJSONMapper */,
 				4D7D1AB61B67D99700E58949 /* UnitTests */,
 				4D7D1AB51B67D99700E58949 /* Products */,
@@ -52,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				4D7D1ADD1B67DBAD00E58949 /* TBRJSONMapperTests.m */,
+				4DCA4C781C56C065002B9C06 /* Resources */,
 				4D7D1AD11B67D99700E58949 /* Supporting Files */,
 			);
 			path = UnitTests;
@@ -73,6 +98,43 @@
 				4D7D1AE31B67DC1200E58949 /* TBRJSONMapper.m */,
 			);
 			name = TBRJSONMapper;
+			sourceTree = "<group>";
+		};
+		4DCA4C781C56C065002B9C06 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4DCA4C791C56C090002B9C06 /* JSON */,
+			);
+			name = Resources;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		4DCA4C791C56C090002B9C06 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				4DCA4C7A1C56C0A6002B9C06 /* address.json */,
+				4DCA4C7B1C56C0A6002B9C06 /* fleskfile_recipe.json */,
+				4DCA4C7C1C56C0A6002B9C06 /* kalops_recipe.json */,
+				4DCA4C7D1C56C0A6002B9C06 /* kotbullar_recipe.json */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
+		4DCA4C841C56C6A3002B9C06 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4DCA4C891C56C6D9002B9C06 /* Address.h */,
+				4DCA4C8A1C56C6D9002B9C06 /* Address.m */,
+				4DCA4C8B1C56C6D9002B9C06 /* Ingredient.h */,
+				4DCA4C8C1C56C6D9002B9C06 /* Ingredient.m */,
+				4DCA4C8D1C56C6D9002B9C06 /* Phone.h */,
+				4DCA4C8E1C56C6D9002B9C06 /* Phone.m */,
+				4DCA4C8F1C56C6D9002B9C06 /* Recipe.h */,
+				4DCA4C901C56C6D9002B9C06 /* Recipe.m */,
+				4DCA4C911C56C6D9002B9C06 /* Step.h */,
+				4DCA4C921C56C6D9002B9C06 /* Step.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +195,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D7D1AE01B67DBBA00E58949 /* Info.plist in Resources */,
+				4DCA4C851C56C6C5002B9C06 /* address.json in Resources */,
+				4DCA4C861C56C6C7002B9C06 /* fleskfile_recipe.json in Resources */,
+				4DCA4C871C56C6C8002B9C06 /* kalops_recipe.json in Resources */,
+				4DCA4C881C56C6CA002B9C06 /* kotbullar_recipe.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +209,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DCA4C951C56C6D9002B9C06 /* Phone.m in Sources */,
+				4DCA4C981C56CD80002B9C06 /* Recipe.m in Sources */,
+				4DCA4C931C56C6D9002B9C06 /* Address.m in Sources */,
 				4D7D1ADE1B67DBAD00E58949 /* TBRJSONMapperTests.m in Sources */,
+				4DCA4C991C56CF11002B9C06 /* Ingredient.m in Sources */,
+				4DCA4C9A1C56CF30002B9C06 /* Step.m in Sources */,
 				4D7D1AE41B67DC1200E58949 /* TBRJSONMapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +353,7 @@
 				4D7D1ADC1B67D99700E58949 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

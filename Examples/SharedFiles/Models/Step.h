@@ -14,10 +14,4 @@
 @property (nonatomic, copy) NSString *text;
 @property (nonatomic, copy) NSArray *ingredients;
 
-// Derived properties
-@property (nonatomic, copy) NSString *imagePath;
-@property (nonatomic, strong) NSNumber *number;
-
-- (NSArray *)sortedIngredients;
-
 @end

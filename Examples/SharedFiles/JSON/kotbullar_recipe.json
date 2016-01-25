@@ -8,6 +8,7 @@
 		"copyright" : "Copyright © Henrik Rindlöw (CC)",
 		"tip" :  "Why not eat your meatballs with a glass of Swedish aqvavit (snaps)?",
 		"stepImagesAvailable" : true,
+        "Ingredient" : {"name" : "frying pan"},
 		"Steps" : [
 							 {
 							 "text" : "Finely dice the onion and sauté gently in a little butter without browning.",
