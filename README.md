@@ -94,7 +94,9 @@ Address *topAddress = [mapper objectGraphForJSONResource:JSONFileInMainBundle
 ```swift
  let mapper = TBRJSONMapper(swiftModuleName: "SwiftExample")
  let filename = "address"
- let recipe = mapper.objectGraphForJSONResource(filename, withRootClassName: "Address") as! Address
+ if let address = mapper.objectGraphForJSONResource(filename, withRootClassName: "Address") as? Address {
+ 	// Do something with your address object
+ }
 ```
 
 # Conventions
@@ -102,7 +104,7 @@ Address *topAddress = [mapper objectGraphForJSONResource:JSONFileInMainBundle
 - There must be a root class in the JSON file, this will be the class returned to you.
 - Classes start with a capital.
 - Arrays (one-to-many relationships) end up with an s, i.e. 'Steps'.
-
+- Properties in model classes must be mutable: You can't use 'var' in Swift or 'readonly' in Objective-C. This is because the mapper instantiates your model object first and then assigns the properties that are available afterwards.
 
 # Methods
 
